@@ -1,6 +1,8 @@
 name: 自動化爬蟲更新與部署
 
 on:
+  push:
+    branches: [ main ]
   schedule:
     # 每天台灣時間凌晨 2 點（UTC 18:00）執行爬蟲
     - cron: '0 18 * * *'
