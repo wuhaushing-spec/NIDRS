@@ -36,15 +36,15 @@
     }
   },
   {
-    "id": "dengue",
-    "category": "第二類",
-    "name": "登革熱",
+    "id": "listeria",
+    "category": "第四類",
+    "name": "李斯特菌症",
     "isRecentlyUpdated": false,
     "caseDefinitions": {
-      "clinicalCriteria": "突發發燒(≧ 38℃)並伴隨下列二項（含）以上症狀：\n1.頭痛/後眼窩痛/肌肉痛/關節痛/骨頭痛。\n2.出疹。\n3.白血球減少（leukopenia）。\n4.噁心/嘔吐。\n5.血壓帶試驗陽性。",
-      "labCriteria": "檢驗結果：登革病毒 NS1 抗原快篩陽性，或核酸檢測陽性。",
-      "epidemiologyCriteria": "發病前 14 日內，曾至登革熱流行地區，或與確定病例有流行病學關聯。",
-      "reportingCriteria": "符合臨床條件，且符合流行病學條件或檢驗條件。",
+      "clinicalCriteria": "臨床上出現下列症狀之一者：1. 敗血症。2. 腦膜炎或腦炎。3. 孕婦流產、死產或早產。",
+      "labCriteria": "臨床檢體（如血液、腦脊髓液、羊水等）分離並鑑定出李斯特菌 (Listeria monocytogenes)。",
+      "epidemiologyCriteria": "曾食用遭污染之食物，或孕婦垂直傳染予胎兒。",
+      "reportingCriteria": "符合臨床條件及檢驗條件。",
       "caseClassification": "確定病例 Confirmed: 符合實驗室檢驗確定條件。"
     },
     "referenceLinks": {

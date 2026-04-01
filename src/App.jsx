@@ -1,11 +1,19 @@
 import React, { useState, useMemo } from 'react';
-import { Search, ChevronDown, Download, AlertCircle, FileText, BookOpen, ShieldAlert } from 'lucide-react';
+import { Search, ChevronDown, Download, AlertCircle, FileText, BookOpen, ShieldAlert, Clock } from 'lucide-react';
 import diseasesData from './data/diseases.json';
+import reportingTimes from './data/reporting_times.json';
 import './index.css';
 
 // Sub-component: DiseaseExpandableCard
 const DiseaseCard = ({ data }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+
+  // 嘗試從手動覆寫資料中抓取通報時效，如果沒有特別寫明就預設為「參考工作手冊」
+  const getReportingTime = (diseaseName) => {
+    // 過濾掉名稱中的英文括號等以方便精準對比
+    const cleanName = diseaseName.split(' ')[0].replace(/\(.*\)/, '');
+    return reportingTimes[diseaseName] || reportingTimes[cleanName] || '立即通報或參考法規';
+  };
 
   const getCategoryClass = (cat) => {
     if (cat.includes('一')) return 'cat-1';
@@ -24,6 +32,9 @@ const DiseaseCard = ({ data }) => {
             {data.category}
           </span>
           <h3 className="disease-name">{data.name}</h3>
+          <span className="updated-badge" style={{ background: '#e0e7ff', color: '#4338ca', border: '1px solid #c7d2fe' }}>
+             <Clock size={14} /> 通報: {getReportingTime(data.name)}
+          </span>
           {data.isRecentlyUpdated && (
             <span className="updated-badge">
               <AlertCircle size={14} /> 剛更新
