@@ -1,0 +1,54 @@
+name: 自動化爬蟲更新與部署
+
+on:
+  schedule:
+    # 每天台灣時間凌晨 2 點（UTC 18:00）執行爬蟲
+    - cron: '0 18 * * *'
+  workflow_dispatch: # 支援手動觸發測試
+
+jobs:
+  scrape-and-build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Web Scraper
+        run: node scripts/scraper.js
+
+      - name: Check for changes in diseases.json
+        id: git-check
+        run: |
+          git diff --exit-code src/data/diseases.json || echo "changes=true" >> $GITHUB_OUTPUT
+
+      - name: Commit if CDC Data Changed
+        if: steps.git-check.outputs.changes == 'true'
+        run: |
+          git config --global user.name 'auto-scraper-bot'
+          git config --global user.email 'bot@actions.github.com'
+          git add src/data/diseases.json
+          git commit -m "chore: 定期更新 CDC 法定傳染病資料庫"
+          git push
+
+      - name: Build React App (Vite)
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "sars",
+    "category": "第一類",
+    "name": "嚴重急性呼吸道症候群 (SARS)",
+    "isRecentlyUpdated": true,
+    "caseDefinitions": {
+      "clinicalCriteria": "同時具有下列四項條件：\n(一) 發燒 (≧38℃)。\n(二) 一樣或以上的下呼吸道症狀 (咳嗽、呼吸困難、呼吸短促)。\n(三) 放射線診斷學上有與肺炎或呼吸窘迫症候群一致的肺浸潤。",
+      "labCriteria": "具有下列任一條件：\n(一) 臨床檢體分離並鑑定出 SARS-CoV 病毒。\n(二) 臨床檢體 SARS-CoV 分子生物學核酸檢測陽性。",
+      "epidemiologyCriteria": "發病前 10 日內，具有下列任一條件：\n(一) 有 SARS 流行地區之旅遊史。\n(二) 有 SARS 確定病例之接觸史。",
+      "reportingCriteria": "具有下列任一條件：\n(一) 符合臨床條件及流行病學條件。\n(二) 醫師或法醫師高度懷疑。",
+      "caseClassification": "可疑病例 Suspected: 具有下列任一個條件 (1. 符合臨床條件及流行病學條件 2. 醫師高度懷疑)。\n極可能病例 Probable: 符合臨床條件，且與確定病例有流行病學之關聯。"
+    },
+    "referenceLinks": {
+      "workManual": "https://www.cdc.gov.tw/Category/MPage/eS_Cpsn81L4I-ZqO3dYhhg",
+      "infectionControl": "https://www.cdc.gov.tw/Category/MPage/eS_Cpsn81L4I-ZqO3dYhhg",
+      "biosafetyGuideline": "https://www.cdc.gov.tw/Category/MPage/eS_Cpsn81L4I-ZqO3dYhhg"
+    }
+  },
+  {
+    "id": "smallpox",
+    "category": "第一類",
+    "name": "天花",
+    "isRecentlyUpdated": true,
+    "caseDefinitions": {
+      "clinicalCriteria": "突然發燒 38.3°C (101°F) 以上，接著依序出現不同型態，如紅疹、丘疹、水泡或膿疱。",
+      "labCriteria": "(一) 臨床檢體（水泡液、膿疱液、痂皮或組織等）分離並鑑定出天花病毒 (Variola virus)。\n(二) 臨床檢體分子生物學核酸檢測陽性。",
+      "epidemiologyCriteria": "曾接觸天花確定病例，如與確定病例有唾液、血液、組織液等接觸，或接觸天花病人使用過沾有天花病毒之物品。",
+      "reportingCriteria": "符合臨床條件並醫師或法醫師高度懷疑。",
+      "caseClassification": "可疑病例 Suspected: 符合臨床條件。\n極可能病例 Probable: 符合臨床條件，且與確定病例有流行病學之關聯。"
+    },
+    "referenceLinks": {
+      "workManual": "https://www.cdc.gov.tw/Category/MPage/eS_Cpsn81L4I-ZqO3dYhhg",
+      "infectionControl": "",
+      "biosafetyGuideline": ""
+    }
+  },
+  {
+    "id": "dengue",
+    "category": "第二類",
+    "name": "登革熱",
+    "isRecentlyUpdated": false,
+    "caseDefinitions": {
+      "clinicalCriteria": "突發發燒(≧ 38℃)並伴隨下列二項（含）以上症狀：\n1.頭痛/後眼窩痛/肌肉痛/關節痛/骨頭痛。\n2.出疹。\n3.白血球減少（leukopenia）。\n4.噁心/嘔吐。\n5.血壓帶試驗陽性。",
+      "labCriteria": "檢驗結果：登革病毒 NS1 抗原快篩陽性，或核酸檢測陽性。",
+      "epidemiologyCriteria": "發病前 14 日內，曾至登革熱流行地區，或與確定病例有流行病學關聯。",
+      "reportingCriteria": "符合臨床條件，且符合流行病學條件或檢驗條件。",
+      "caseClassification": "確定病例 Confirmed: 符合實驗室檢驗確定條件。"
+    },
+    "referenceLinks": {
+      "workManual": "https://www.cdc.gov.tw/Category/MPage/eS_Cpsn81L4I-ZqO3dYhhg",
+      "infectionControl": "https://www.cdc.gov.tw/Category/MPage/eS_Cpsn81L4I-ZqO3dYhhg",
+      "biosafetyGuideline": ""
+    }
+  }
+]
