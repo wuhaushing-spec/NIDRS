@@ -613,7 +613,7 @@
     "name": "流行性腮腺炎",
     "isRecentlyUpdated": false,
     "caseDefinitions": {
-      "clinicalCriteria": "*此疾病目前無網頁版介紹文字，詳細法規請下載下方官方附件查看。*",
+      "clinicalCriteria": "請點擊下方連結進入專區查閱。",
       "labCriteria": "詳細檢驗條件與採檢規範，請查閱官方最新修訂之通報附件。",
       "epidemiologyCriteria": "詳細流行病學條件請參閱官方文件。",
       "reportingCriteria": "符合上述條件並由醫師診斷通報。",
@@ -709,7 +709,7 @@
     "name": "退伍軍人病",
     "isRecentlyUpdated": false,
     "caseDefinitions": {
-      "clinicalCriteria": "*此疾病目前無網頁版介紹文字，詳細法規請下載下方官方附件查看。*",
+      "clinicalCriteria": "請點擊下方連結進入專區查閱。",
       "labCriteria": "詳細檢驗條件與採檢規範，請查閱官方最新修訂之通報附件。",
       "epidemiologyCriteria": "詳細流行病學條件請參閱官方文件。",
       "reportingCriteria": "符合上述條件並由醫師診斷通報。",
